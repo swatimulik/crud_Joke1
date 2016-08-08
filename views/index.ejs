@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  
+     <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+
+  <title>MY APP</title>
+  
+</head>
+<body>
+
+  <ol class="jokes">
+  <% for(var i=0; i<jok.length; i++) {%>
+    <li class="quote"> setup  :
+      <span><%= jok[i].setup %></span>
+      Punchline  :<span><%= jok[i].punchline %></span>
+    </li>
+  <% } %>
+  </ol>
+
+  <form action="/jokes" method="POST">
+    <input type="text" placeholder="setup" name="setup">
+    <input type="text" placeholder="punchline" name="punchline">
+    <button type="submit">Insert</button>
+  </form>
+ 
+ <div>
+     <input id ="del_text" type="text" placeholder="setup" >
+    <button id="delet"> Delete </button>
+  </div>
+  
+   <div>
+     <input id ="old_text" type="text" placeholder="setup" >
+	  <input id ="new_setup" type="text" placeholder="New setup" >
+	  <input id ="new_punchline" type="text" placeholder="New punchline" > 
+    <button id="updat"> Update </button>
+  </div>
+<script src="main.js"></script> 
+
+</body>
+</html>
